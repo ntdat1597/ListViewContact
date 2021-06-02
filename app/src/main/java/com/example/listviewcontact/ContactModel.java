@@ -28,7 +28,5 @@ public class ContactModel {
     }
 
 
-    public int getAvatar() {
-        return getAvatar();
-    }
+
 }

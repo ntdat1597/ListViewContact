@@ -45,13 +45,15 @@ public class ContactAdapter extends BaseAdapter {
             holder.tvName = (TextView)convertView.findViewById(R.id.tvName);
             holder.tvPhone = (TextView)convertView.findViewById(R.id.tvPhone);
             holder.ivAvatar = (ImageView) convertView.findViewById(R.id.ivAvatar);
+            convertView.setTag(holder);
+
 
         }
         ViewHolder holder = (ViewHolder) convertView.getTag();
         ContactModel model = listContacts.get(position);
         holder.tvName.setText(model.getName());
         holder.tvPhone.setText(model.getPhone());
-        holder.ivAvatar.setImageResource(model.getAvatar());
+        holder.ivAvatar.setImageResource(model.getImage());
         return convertView;
 
     }
